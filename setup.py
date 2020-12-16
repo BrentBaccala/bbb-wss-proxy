@@ -16,7 +16,9 @@ setuptools.setup(
     url="https://github.com/BrentBaccala/bbb-wss-proxy",
     packages=setuptools.find_packages(),
     install_requires=[
-        'websockify'
+        'websockify',
+        'pyjavaproperties',
+        'pyjwt',
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
