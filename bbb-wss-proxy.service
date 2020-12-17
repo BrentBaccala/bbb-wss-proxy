@@ -1,0 +1,20 @@
+[Unit]
+Description=WebSocket proxy for BigBlueButton VNC service
+Requires=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/share/bbb-wss-proxy
+EnvironmentFile=/etc/default/bbb-wss-proxy
+ExecStart=/usr/share/bbb-wss-proxy/bin/bbb-wss-proxy
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=60
+SuccessExitStatus=
+TimeoutStopSec=5
+User=bigbluebutton
+PermissionsStartOnly=true
+LimitNOFILE=1024
+
+[Install]
+WantedBy=multi-user.target
