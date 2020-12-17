@@ -1,0 +1,5 @@
+bbb-wss-proxy (1:2.3.0-freesoft-2020-12-06) extra; urgency=low
+
+  * Initial release.
+
+ -- Brent Baccala <cosine@freesoft.org>  Sun, 15 Nov 2020 19:51:00 -0500

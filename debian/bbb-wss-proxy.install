@@ -1,0 +1,2 @@
+bbb-wss-proxy				/usr/bin/
+bbb-wss-proxy.service			/lib/systemd/system/
