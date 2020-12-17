@@ -92,7 +92,7 @@ addService() {
     [ -e "${app_sys_config}" ] && . "${app_sys_config}"
     if [ -n "${PACKAGE_PREFIX}" ] ;
     then
-        default_install_location="/usr/bin/bbb-wss-proxy"
+        default_install_location="/usr/share/bbb-wss-proxy/bin/bbb-wss-proxy"
         actual_install_location="${PACKAGE_PREFIX}/${app_name}"
 
         sed -i "s|$default_install_location|$actual_install_location|g" "/usr/lib/systemd/system/${app_name}.service"

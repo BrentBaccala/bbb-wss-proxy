@@ -1,2 +1,2 @@
-bbb-wss-proxy				/usr/bin/
+bbb-wss-proxy				/usr/share/bbb-wss-proxy/bin/
 bbb-wss-proxy.service			/lib/systemd/system/
