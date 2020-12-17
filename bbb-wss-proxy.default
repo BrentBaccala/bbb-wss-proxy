@@ -1,6 +1,11 @@
 
+# The TCP port to listen on for WebSocket connections
+# Should match the setting in /etc/bigbluebutton/nginx/bbb-wss-proxy.nginx
 SOURCE=localhost:6101
 
-DEFAULT_TARGET=localhost:5900
+# The VNC server to relay connections to
+TARGET=localhost:5900
 
-ALLOW-OVERRIDE=no
+# Allow the proxy user to override TARGET by specifying 'host' and 'port'
+# in the URL query string
+# ALLOW_OVERRIDE=no
