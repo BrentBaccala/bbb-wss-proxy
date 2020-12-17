@@ -1,0 +1,6 @@
+debian/*.debhelper
+debian/bbb-wss-proxy
+debian/bbb-wss-proxy.substvars
+debian/debhelper-build-stamp
+debian/files
+debian/tmp
