@@ -7,14 +7,12 @@ Type=simple
 WorkingDirectory=/usr/share/bbb-wss-proxy
 EnvironmentFile=/etc/default/bbb-wss-proxy
 ExecStart=/usr/share/bbb-wss-proxy/bin/bbb-wss-proxy
-ExecReload=/bin/kill -HUP $MAINPID
-Restart=always
-RestartSec=60
-SuccessExitStatus=
 TimeoutStopSec=5
+
+# We could use User=nobody because bigbluebutton.properties is currently
+# world-readable, but I anticipate that this will change since that file
+# contains a copy of the API key (which is why we need to read it).
 User=bigbluebutton
-PermissionsStartOnly=true
-LimitNOFILE=1024
 
 [Install]
 WantedBy=multi-user.target

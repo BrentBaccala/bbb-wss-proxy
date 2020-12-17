@@ -4,8 +4,9 @@ Section: default
 Maintainer: Brent Baccala <cosine@freesoft.org>
 Standards-Version: 4.0.0
 Homepage: http://github.com/BrentBaccala/bbb-wss-proxy
+Build-Depends: dh-exec
 
 Package: bbb-wss-proxy
 Architecture: all
-Depends: python3-websockify, python3-jwt, python-pyjavaproperties
+Depends: bbb-html5, python3-websockify, python3-jwt, python-pyjavaproperties
 Description: A WebSocket proxy for Big Blue Button

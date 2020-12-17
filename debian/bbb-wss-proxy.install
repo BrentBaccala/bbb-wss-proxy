@@ -1,2 +1,5 @@
+#! /usr/bin/dh-exec
 bbb-wss-proxy				/usr/share/bbb-wss-proxy/bin/
 bbb-wss-proxy.service			/lib/systemd/system/
+bbb-wss-proxy.default			=> /etc/default/bbb-wss-proxy
+bbb-wss-proxy.nginx			/etc/bigbluebutton/nginx/
