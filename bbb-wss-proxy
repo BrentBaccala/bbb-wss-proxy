@@ -21,28 +21,30 @@
 # access to the token in the query string, not the entire query
 # string.
 
-
 import sys
 import os
+import re
 import urllib
 import jwt
-import pyjavaproperties
 
 from websockify import websocketproxy
 from websockify.websocketproxy import ProxyRequestHandler
 
-# We extract the Big Blue Button API key from PROP_FILE
+# Extract the Big Blue Button API key from PROP_FILE
+#
+# We could use pyjavaproperties to parse the file, but this package doesn't
+# currently exist in Ubuntu 18's repository as a python3 package (only as a
+# Python 2 package), so I just parse the file with a regular expression.
 
 PROP_FILE = "/usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties"
 
-def bigbluebutton_config():
-    config = pyjavaproperties.Properties()
-    with open(PROP_FILE) as file:
-        config.load(file)
-    return config
-
 def securitySalt():
-    return bigbluebutton_config()['securitySalt']
+    with open(PROP_FILE) as file:
+        for line in file:
+            match = re.match(r'securitySalt=(.*)', line)
+            if match:
+                return match.group(1)
+    return None
 
 old_new_websocket_client = ProxyRequestHandler.new_websocket_client
 

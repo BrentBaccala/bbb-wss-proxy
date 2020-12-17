@@ -8,5 +8,5 @@ Build-Depends: dh-exec
 
 Package: bbb-wss-proxy
 Architecture: all
-Depends: bbb-html5, python3-websockify, python3-jwt, python-pyjavaproperties
+Depends: bbb-html5, python3-websockify, python3-jwt
 Description: A WebSocket proxy for Big Blue Button
