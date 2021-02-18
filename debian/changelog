@@ -1,3 +1,9 @@
+bbb-wss-proxy (1:2.3.0-freesoft-2021-02-17) extra; urgency=low
+
+  * Changed URL syntax to put JWT in path, not query string, to be consistent with bbb-vnc-collaborate
+
+ -- Brent Baccala <cosine@freesoft.org>  Wed, 17 Feb 2021 23:14:00 -0500
+
 bbb-wss-proxy (1:2.3.0-freesoft-2020-12-17) extra; urgency=low
 
   * Initial release.

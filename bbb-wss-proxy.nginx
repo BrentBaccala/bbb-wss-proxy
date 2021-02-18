@@ -1,4 +1,4 @@
-location /proxy {
+location /proxy/ {
         proxy_pass http://localhost:6101/;
 
         proxy_http_version 1.1;
