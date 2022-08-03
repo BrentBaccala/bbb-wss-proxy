@@ -6,7 +6,7 @@ Requires=network.target
 Type=simple
 WorkingDirectory=/usr/share/bbb-wss-proxy
 EnvironmentFile=/etc/default/bbb-wss-proxy
-ExecStart=/usr/share/bbb-wss-proxy/bin/bbb-wss-proxy
+ExecStart=/usr/share/bbb-wss-proxy/bin/bbb-wss-proxy -v
 TimeoutStopSec=5
 
 # We could use User=nobody because bigbluebutton.properties is currently

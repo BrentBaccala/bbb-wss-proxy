@@ -55,16 +55,8 @@ allowed_targets = None
 
 def new_websocket_client(self):
 
-    try:
-        url = urllib.parse.urlparse(self.path)
-        JWT = url.path[1:]
-        querydict = urllib.parse.parse_qs(url.query)
-        jwt.decode(JWT, securitySalt())
-    except (jwt.PyJWTError, KeyError, IndexError) as ex:
-        self.log_message(repr(ex))
-        self.send_response(401, 'Unauthorized')
-        self.end_headers()
-        return
+    url = urllib.parse.urlparse(self.path)
+    querydict = urllib.parse.parse_qs(url.query)
 
     # Use the defaults specified on the command line unless overridden by URL.
 

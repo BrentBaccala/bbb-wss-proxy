@@ -1,3 +1,9 @@
+bbb-wss-proxy (1:2.3.0-freesoft-2022-07-31) extra; urgency=low
+
+  * Use standard BigBlueButton authentication tokens
+
+ -- Brent Baccala <cosine@freesoft.org>  Sun, 31 Jul 2022 23:08:49 -0400
+
 bbb-wss-proxy (1:2.3.0-freesoft-2021-02-17) extra; urgency=low
 
   * Changed URL syntax to put JWT in path, not query string, to be consistent with bbb-vnc-collaborate
